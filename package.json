@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for Click Royale",
+  "main": "index.js",
+  "author": "K Truong",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "start": "forever start index.js",
+    "dev": "nodemon index.js",
+    "stop": "forever stopall",
+    "restart": "forever restartall"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase": "^8.2.6",
+    "firebase-admin": "^9.1.1",
+    "nodemon": "^2.0.7",
+    "rxjs": "^6.6.6",
+    "socket.io": "^4.0.1",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "forever": "^3.0.2"
+  }
+}
