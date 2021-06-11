@@ -26,7 +26,7 @@ class Player {
         // }
         this.uid = userRecord.uid;
         this.displayName = userRecord.displayName || null;
-        this.photoURL = userRecord.photoURL || null;
+        // this.photoURL = userRecord.photoURL || null;
         this.score = 0;
         this.status = PLAYER_STATUS.SAFE;
         this.socketId = socketId;
@@ -40,7 +40,7 @@ class Player {
         this.status = PLAYER_STATUS.ELIMINATED;
     }
 
-    increaseClicks(points) {
+    updateScore(points) {
         this.score += points;
     }
 

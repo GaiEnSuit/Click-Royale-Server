@@ -23,7 +23,7 @@ class Game {
                 });
             })
             .catch((error) => {
-                console.log(error)
+                console.log(error);
                 socket.emit(SOCKET_EVENT.ERROR, error);
             });
     }
@@ -61,6 +61,16 @@ class Game {
             this.latestMatch = null;
         }
 
+        delete this.matches[match.id];
+
+        console.log(`Match ${match.id} is finished`);
+    }
+
+    /**
+     *
+     * @param {Match} match
+     */
+    saveMatchToDatabase(match) {
         if (match.getPlayers().length !== 0) {
             admin
                 .firestore()
@@ -78,10 +88,6 @@ class Game {
                     console.log("Error adding document: ", error);
                 });
         }
-
-        delete this.matches[match.id];
-
-        console.log(`Match ${match.id} is finished`);
     }
 }
 

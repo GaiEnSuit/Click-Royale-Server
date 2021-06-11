@@ -45,7 +45,6 @@ class Match {
     }
 
     // Public functions
-
     isFull() {
         return this.numberOfPlayers >= MAX_PLAYERS_PER_MATCH;
     }
@@ -88,7 +87,7 @@ class Match {
             SOCKET_EVENT.UPDATE_SCORE
         ).subscribe((points) => {
             if (this.status === MATCH_STATUS.FINISHED) return;
-            this.players[socket.id].increaseClicks(points);
+            this.players[socket.id].updateScore(points);
             this.broadcastPlayers();
         });
     }

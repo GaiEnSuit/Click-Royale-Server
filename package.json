@@ -14,18 +14,18 @@
     "restart": "forever restartall"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "firebase": "^8.2.6",
-    "firebase-admin": "^9.1.1",
+    "firebase": "^8.6.5",
+    "firebase-admin": "^9.9.0",
     "nodemon": "^2.0.7",
-    "rxjs": "^6.6.6",
-    "socket.io": "^4.0.1",
+    "rxjs": "^7.1.0",
+    "socket.io": "^4.1.2",
     "uuid": "^8.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.8.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "forever": "^3.0.2"
+    "eslint": "^7.28.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "forever": "^4.0.0"
   }
 }
